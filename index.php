@@ -271,11 +271,17 @@
  			<th>Moyenne</th>
  		</tr>
 
- 		<tr>
- 			<td>Sara</td>
- 			<td>Sayegh</td>
- 			<td>11.3</td>
- 		</tr>
+ 		<?php
+ 			foreach ($classe as $student){
+
+ 				echo "<tr>
+			 			<td>".$student["firstname"]."</td>
+			 			<td>".$student["lastname"]."</td>
+			 			<td>".(($student["CC1"]+$student["CC2"]+$student["partiel"])/3) ."</td>
+			 		</tr>";
+
+ 			}
+ 		?>
  	</table>
 
 
